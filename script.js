@@ -1495,21 +1495,6 @@ window.addEventListener('scroll', function () {
 });
 document.getElementById('scrollTop').addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
 
-/* ─── Hamburger toggle ─── */
-const hamburger = document.getElementById('hamburger');
-const navLinks = document.getElementById('navLinks');
-if (hamburger && navLinks) {
-  hamburger.addEventListener('click', function () {
-    this.classList.toggle('active');
-    navLinks.classList.toggle('active');
-  });
-  navLinks.querySelectorAll('a').forEach(function (link) {
-    link.addEventListener('click', function () {
-      hamburger.classList.remove('active');
-      navLinks.classList.remove('active');
-    });
-  });
-}
 
 function toggleDarkMode() {
   const html = document.documentElement;
