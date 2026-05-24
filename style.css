@@ -23,6 +23,8 @@ body {
   color: var(--text);
   line-height: 1.7;
   overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
 }
 
 h1, h2, h3, h4 {
@@ -154,8 +156,8 @@ nav .links a {
 nav .links a:hover { color: var(--accent); }
 
 @media (max-width: 768px) {
-  nav .container { flex-direction: row; gap: 8px; }
-  nav .links { justify-content: center; gap: 10px; flex-wrap: wrap; }
+  nav .container { flex-direction: column; align-items: center; gap: 6px; }
+  nav .links { justify-content: center; gap: 6px; flex-wrap: wrap; width: 100%; }
   nav .links a { font-size: 0.78rem; }
 }
 
@@ -747,6 +749,10 @@ footer {
 }
 
 /* ─── Hamburger (removed — links always visible) ─── */
+
+[data-theme="dark"] nav .links {
+  background: var(--cream);
+}
 
 .hamburger span {
   display: block;
